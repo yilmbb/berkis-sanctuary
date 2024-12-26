@@ -1,0 +1,126 @@
+/* Import custom fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&family=Ubuntu:wght@300..700&display=swap');
+
+/* Global container styling */
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #121212; /* Dark retro background */
+  color: inherit !important;
+  background: none !important;
+  text-align: center;
+  padding: 20px;
+  margin: 0; /* Reset margins to avoid color mismatch */
+  box-sizing: border-box; /* Ensure padding and borders are included in width/height */
+}
+
+body {
+  margin: 0; /* Reset default margin */
+  padding: 0; /* Reset default padding */
+  background-color: #121212; /* Match the container background color */
+  color: #f4f4f4; /* Match the container text color */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Ensure consistent font */
+  box-sizing: border-box; /* Fix overflow issues */
+}
+
+html {
+  height: 100%; /* Ensure the background color fills the viewport */
+  margin: 0; /* Reset default margin */
+  padding: 0; /* Reset default padding */
+  background-color: #121212; /* Match container background */
+  box-sizing: border-box; /* Consistent sizing model */
+}
+
+/* Main title fade-in animation */
+.landing-title {
+  font-family: 'Roboto Mono', monospace; /* Gothic/retro font */
+  font-size: 3rem;
+  color: #ffffff; /* Neon green */
+  animation: fade-in-title 2s ease-in-out; /* Smooth fade-in effect */
+  margin-bottom: 20px;
+}
+
+/* Subtext box */
+.landing-container .landing-subtext-box {
+  font-family: 'Roboto Mono', monospace; /* Notebook font */
+  font-size: 1rem;
+  line-height: 1.8;
+  padding: 20px;
+  border: 2px solid #ffffff; /* White border around text */
+  border-radius: 0px; /* No rounded corners */
+  color: #ffffff !important; /* Force white text color */
+  background-color: transparent !important; /* Force transparent background */
+  max-width: 650px; /* Limit width for readability */
+  margin-bottom: 30px;
+  animation: fade-in-subtext 2s ease-in-out forwards; /* Delayed fade-in for subtext */
+  animation-delay: 2.5s; /* Starts after the title animation finishes */
+  opacity: 0; /* Start hidden */
+}
+
+
+/* Buttons container */
+.landing-buttons {
+  display: flex;
+  gap: 20px; /* Space between buttons */
+}
+
+/* Shared button styles */
+.enter-button,
+.leave-button {
+  padding: 8px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 2px solid #ffffff; /* White border around text */
+  border-radius: 0px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s, transform 0.2s ease;
+  font-family: 'Roboto Mono', monospace; /* Matching retro font */
+}
+
+/* Enter button */
+.enter-button {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.enter-button:hover {
+  background-color: #afc9af; /* Subtle green hover */
+  transform: scale(1.03); /* Subtle zoom effect */
+}
+
+/* Leave button */
+.leave-button {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.leave-button:hover {
+  background-color: #bb9696; /* Subtle red hover */
+  transform: scale(1.03); /* Subtle zoom effect */
+}
+
+/* Keyframes for fade-in animations */
+@keyframes fade-in-title {
+  from {
+    opacity: 0;
+    transform: translateY(-20px); /* Slide up effect */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-subtext {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
